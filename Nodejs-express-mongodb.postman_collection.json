@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "d7537268-3098-47b2-8bb9-024a2dde6716",
+		"name": "Nodejs-express-mongodb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27762159"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nkamesh1996@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nkamesh1996@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2FtZXNoIiwiZW1haWwiOiJua2FtZXNoMTk5QGdtYWlsLmNvbSIsImlkIjoiNjYxNGJjZmIzMWQwNmY1YThlMDM2MDMxIn0sImlhdCI6MTcxMjkzOTk2MSwiZXhwIjoxNzEyOTQwODYxfQ.k-vfTk6Lpt-QiFY0O9LO5RzaQnd9UyjVCMQejwEnAXo"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"nkamesh1996@gmail.com\",\r\n    \"newPassword\":\"12345678\",\r\n    \"otp\":\"1886\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2FtZXNoIiwiZW1haWwiOiJua2FtZXNoMTk5QGdtYWlsLmNvbSIsImlkIjoiNjYxNGJjZmIzMWQwNmY1YThlMDM2MDMxIn0sImlhdCI6MTcxMjkzOTk2MSwiZXhwIjoxNzEyOTQwODYxfQ.k-vfTk6Lpt-QiFY0O9LO5RzaQnd9UyjVCMQejwEnAXo"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/BR SYSTEMS/Downloads/printapp_migrate.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamesh\",\r\n    \"email\":\"nkamesh1996@gmailc.com\",\r\n    \"mobile_no\":\"9715413109\",\r\n    \"address\":\"madurai\",\r\n    \"profile_image\":\"file-1716393426251-6f715ce5-b481-40d7-8d23-41ed898bed19.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamesh N\",\r\n    \"email\":\"nkamesh1996@gmailc.com\",\r\n    \"mobile_no\":\"9715413109\",\r\n    \"address\":\"madurai - 625011\",\r\n    \"profile_image\":\"file-1716393867293-fbcbcea5-5768-4f97-bfc6-b1f3b2f0a8b7.pdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/update/664e1707bd910898b936119f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"update",
+								"664e1707bd910898b936119f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2FtZXNoIiwiZW1haWwiOiJua2FtZXNoMTk5QGdtYWlsLmNvbSIsImlkIjoiNjYxNGJjZmIzMWQwNmY1YThlMDM2MDMxIn0sImlhdCI6MTcxMjk0MzEzOSwiZXhwIjoxNzEyOTQ0MDM5fQ.R2vAIFa89P3OS7-FJFkaCiw_5L8o1YoE8sL5vjmGvy4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamesh N\",\r\n    \"address\":\"76 keenet nagar\",\r\n    \"amount\":\"99999999\",\r\n    \"phoneno\":\"9715413109\",\r\n    \"buyer\":\"kamesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/list?page=1&limit=10&searchVal=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "searchVal",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "view",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2FtZXNoIiwiZW1haWwiOiJua2FtZXNoMTk5QGdtYWlsLmNvbSIsImlkIjoiNjYxNGJjZmIzMWQwNmY1YThlMDM2MDMxIn0sImlhdCI6MTcxMjk0MzEzOSwiZXhwIjoxNzEyOTQ0MDM5fQ.R2vAIFa89P3OS7-FJFkaCiw_5L8o1YoE8sL5vjmGvy4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamesh N\",\r\n    \"address\":\"76 keenet nagar\",\r\n    \"amount\":\"99999999\",\r\n    \"phoneno\":\"9715413109\",\r\n    \"buyer\":\"kamesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/view/664e17eabd910898b93611a5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"view",
+								"664e17eabd910898b93611a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoia2FtZXNoIiwiZW1haWwiOiJua2FtZXNoMTk5QGdtYWlsLmNvbSIsImlkIjoiNjYxNGJjZmIzMWQwNmY1YThlMDM2MDMxIn0sImlhdCI6MTcxMjk0MzEzOSwiZXhwIjoxNzEyOTQ0MDM5fQ.R2vAIFa89P3OS7-FJFkaCiw_5L8o1YoE8sL5vjmGvy4"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"kamesh N\",\r\n    \"address\":\"76 keenet nagar\",\r\n    \"amount\":\"99999999\",\r\n    \"phoneno\":\"9715413109\",\r\n    \"buyer\":\"kamesh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/delete/664e17eabd910898b93611a5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"delete",
+								"664e17eabd910898b93611a5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bulk email",
+			"item": [
+				{
+					"name": "bulk email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"Bulk email\",\r\n    \"text\":\"hi customers\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/send-emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"send-emails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
